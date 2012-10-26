@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+export JAVA_HOME=/usr/lib/jvm/default-java
+
+# Put depended upon jars in here
+# export CLASSPATH=
+
+%:
+	dh --with javahelper $@
+
+override_dh_auto_build:
+	echo "Not building (resuing jar from the package)."
+
+override_dh_install:
+	mkdir -p debian/zgrviewer/usr/share/zgrviewer/
+	cp -a target/* debian/zgrviewer/usr/share/zgrviewer/
+	mv debian/zgrviewer/usr/share/zgrviewer/zgrviewer-0.8.2.jar debian/zgrviewer/usr/share/zgrviewer/zgrviewer.jar
+
+override_jh_manifest:
+

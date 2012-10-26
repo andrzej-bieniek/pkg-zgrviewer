@@ -1,0 +1,3 @@
+usr/share/zgrviewer/zgrviewer.jar:
+ Main-Class: <Main Class>
+ Debian-Java-Home: /usr/lib/jvm/default-java

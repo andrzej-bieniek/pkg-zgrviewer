@@ -1,0 +1,16 @@
+Source: zgrviewer
+Section: misc
+Priority: optional
+Maintainer: Andrzej Bieniek <andyhelp@gmail.com>
+Build-Depends: debhelper (>= 7), default-jdk, javahelper (>= 0.37ubuntu1) , maven2, maven-debian-helper
+Standards-Version: 3.9.2
+Homepage: http://zvtm.sourceforge.net/zgrviewer.html
+
+Package: zgrviewer
+Architecture: all
+Depends: ${java:Depends}, ${misc:Depends}
+Recommends: ${java:Recommends}
+Description: Graph visualizer implemented in Java
+ ZGRViewer is a graph visualizer implemented in Java and based upon the Zoomable Visual Transformation Machine. It is specifically aimed at displaying graphs expressed using the DOT language from AT&T GraphViz and processed by programs dot, neato or others such as twopi.
+ ZGRViewer is designed to handle large graphs, and offers a zoomable user interface (ZUI), which enables smooth zooming and easy navigation in the visualized structure.
+ ZGRViewer should be able to load any file that uses the DOT language to describe the graph.
